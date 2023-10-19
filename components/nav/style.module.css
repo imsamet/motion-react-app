@@ -1,0 +1,31 @@
+.nav {
+  @apply fixed
+  top-0
+  left-0
+  w-full
+  pt-10
+  pb-10;
+  transition: var(--delay);
+  &.scroll {
+    @apply pt-5
+    pb-5
+    border-b;
+  }
+}
+.logo {
+  @apply h-10
+  w-auto
+  cursor-pointer;
+  transition: var(--delay);
+  &:hover {
+    @apply opacity-70;
+  }
+}
+.content {
+  @apply flex
+  justify-between;
+}
+.buttonBox {
+  @apply flex
+  gap-x-2.5;
+}

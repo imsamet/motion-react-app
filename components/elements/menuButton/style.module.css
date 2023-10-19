@@ -1,0 +1,21 @@
+.menu {
+  @apply text-white
+  rounded-lg
+  relative
+  truncate;
+  background: var(--blue);
+  &::before {
+    @apply block
+    w-full
+    h-full
+    absolute
+    top-full
+    left-0;
+    content: '';
+    background: linear-gradient(180deg, rgba(26, 168, 212, 0), #1aa8d4);
+    transition: var(--delay);
+  }
+  &:hover::before {
+    @apply top-0;
+  }
+}

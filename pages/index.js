@@ -1,3 +1,3 @@
 export default function Home({}) {
-  return <>home</>;
+  return <div style={{ minHeight: '200vh', background: 'var(--dark-blue)' }}></div>;
 }
