@@ -1,27 +1,64 @@
 .button {
   @apply flex
-  flex-col
-  border
-  rounded-lg
-  p-3;
-  border-color: #ffffff4d;
-  min-width: 220px;
-  transition: var(--delay);
-  &:hover {
-    border-color: #ffffff80;
-    .icon {
-      background-color: var(--blue);
-      color: #fff;
-      transform: rotate(-45deg);
+  flex-col;
+  /* Type */
+  &.medium {
+    @apply p-3
+    rounded-lg;
+    min-width: 220px;
+  }
+  &.large {
+    @apply p-5
+    h-28
+    justify-between
+    rounded-3xl;
+    min-width: 290px;
+  }
+
+  /* Variant */
+  &.bordered {
+    @apply border;
+    border-color: #ffffff4d;
+    &:hover {
+      border-color: #ffffff80;
+    }
+  }
+  &.colored {
+    @apply relative
+    overflow-hidden;
+    background: var(--blue);
+    &::before {
+      @apply block
+      w-full
+      h-full
+      absolute
+      top-full
+      left-0;
+      content: '';
+      background: linear-gradient(180deg, rgba(26, 168, 212, 0), #1aa8d4);
+      transition: var(--delay);
+    }
+    &:hover::before {
+      @apply top-0;
     }
   }
 }
+/* Text */
 .text {
   @apply font-medium
   text-white
-  text-sm
+  relative;
+}
+/* Text type */
+.medium .text {
+  @apply text-sm 
   h-2.5;
 }
+.large .text {
+  @apply text-2xl
+  h-4;
+}
+/* Icon */
 .icon {
   @apply ml-auto
   w-5
@@ -30,5 +67,26 @@
   bg-white
   text-black
   p-1;
-  transition: var(--delay);
+}
+.button:hover .icon {
+  @apply text-white 
+  transform -rotate-45;
+}
+/* Icon type */
+.medium .icon {
+  @apply w-5
+    h-5
+    p-1;
+}
+.large .icon {
+  @apply w-8
+    h-8
+    p-2;
+}
+/* Icon variant */
+.bordered:hover .icon {
+  background-color: var(--blue);
+}
+.colored:hover .icon {
+  @apply bg-black;
 }
