@@ -5,18 +5,19 @@
   w-full
   pt-10
   pb-10;
-  transition: var(--delay);
   &.scroll {
     @apply pt-5
     pb-5
     border-b;
+  }
+  &.close {
+    @apply p-0;
   }
 }
 .logo {
   @apply h-10
   w-auto
   cursor-pointer;
-  transition: var(--delay);
   &:hover {
     @apply opacity-70;
   }
@@ -24,8 +25,79 @@
 .content {
   @apply flex
   justify-between;
+  &.close {
+    @apply hidden
+    pointer-events-none;
+  }
 }
 .buttonBox {
   @apply flex
   gap-x-2.5;
+}
+button.contactButton {
+  @apply hidden
+  md:flex;
+}
+.hamburberMenu {
+  @apply opacity-0
+  fixed
+  top-0
+  left-0
+  h-screen
+  w-screen
+  cursor-pointer
+  pointer-events-none;
+  background: #000918e6;
+  &.open {
+    @apply opacity-100
+    pointer-events-auto;
+    .menuContent {
+      @apply right-0;
+    }
+  }
+  .menuContent {
+    @apply fixed
+    -right-96
+    w-fit
+    h-screen
+    cursor-default
+    overflow-scroll;
+    background-color: var(--dark-blue);
+    padding: 12px 80px 80px;
+    .item {
+      @apply pt-10
+      pb-10
+      border-b;
+      border-color: #ffffff4d;
+    }
+    .link {
+      @apply text-white
+      font-medium
+      text-5xl
+      opacity-100;
+      &.subLink {
+        @apply text-lg;
+      }
+      &.active {
+        @apply opacity-50;
+      }
+      &:hover {
+        @apply opacity-100;
+        color: var(--blue);
+      }
+    }
+    .subList {
+      @apply pt-10
+      mt-10
+      border-t;
+      border-color: #ffffff4d;
+    }
+    .subItem {
+      @apply flex items-center;
+      height: 29.6px;
+    }
+  }
+  .hamburgerContactButton {
+    @apply mt-20;
+  }
 }
