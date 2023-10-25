@@ -14,6 +14,7 @@ const Nav = () => {
   const toggle = () => {
     setOpenMenu(prev => !prev);
   };
+  const isOtherPage = router.pathname !== '/';
   const items = [
     {
       label: 'Homepage',
@@ -28,15 +29,27 @@ const Nav = () => {
       ],
     },
     { label: 'Market Insights', href: '#' },
-    { label: 'Get in touch', href: '#' },
+    { label: 'Get in touch', href: 'contact-us' },
   ];
   return (
-    <nav className={cn(styles.nav, scroll > 5 && styles.scroll, isOpenMenu && styles.close)}>
+    <nav
+      className={cn(
+        styles.nav,
+        scroll > 5 && styles.scroll,
+        isOpenMenu && styles.close,
+        isOtherPage && styles.otherPage,
+      )}
+    >
       <div className="container">
         <div className={cn(styles.content, isOpenMenu && styles.close)}>
           <Image src="/logo-white.png" className={styles.logo} height="30" width="189" />
           <div className={styles.buttonBox}>
-            <Button size="medium" variant="bordered" className={styles.contactButton}>
+            <Button
+              color={isOtherPage ? 'black' : 'white'}
+              size="medium"
+              variant="bordered"
+              className={styles.contactButton}
+            >
               Request a demo
             </Button>
             <MenuButton onClick={toggle} />
@@ -46,16 +59,16 @@ const Nav = () => {
       <div onClick={toggle} className={cn(styles.hamburberMenu, isOpenMenu && styles.open)}>
         <div className={styles.menuContent}>
           <ul className={styles.list}>
-            {items?.map(i => (
-              <li className={styles.item}>
+            {items?.map((i, key) => (
+              <li key={key} className={styles.item}>
                 <Link className={cn(styles.link, router.pathname === i?.href && styles.active)} href={i?.href}>
                   {i?.label}
                 </Link>
                 {i?.subItem && (
                   <>
                     <ul className={styles.subList}>
-                      {i?.subItem?.map(s => (
-                        <li className={styles.subItem}>
+                      {i?.subItem?.map((s, sKey) => (
+                        <li key={sKey} className={styles.subItem}>
                           <Link
                             className={cn(styles.link, styles.subLink, router.asPath === s?.href && styles.active)}
                             href={s?.href}

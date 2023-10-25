@@ -4,7 +4,12 @@
   left-0
   w-full
   pt-10
-  pb-10;
+  pb-10
+  dv-transition;
+  &.otherPage {
+    @apply sticky
+    top-0;
+  }
   &.scroll {
     @apply pt-5
     pb-5
@@ -46,7 +51,8 @@ button.contactButton {
   h-screen
   w-screen
   cursor-pointer
-  pointer-events-none;
+  pointer-events-none
+  dv-transition;
   background: #000918e6;
   &.open {
     @apply opacity-100
@@ -61,7 +67,8 @@ button.contactButton {
     w-fit
     h-screen
     cursor-default
-    overflow-scroll;
+    overflow-scroll
+    dv-transition;
     background-color: var(--dark-blue);
     padding: 12px 80px 80px;
     .item {
@@ -74,7 +81,8 @@ button.contactButton {
       @apply text-white
       font-medium
       text-5xl
-      opacity-100;
+      opacity-100
+      dv-transition;
       &.subLink {
         @apply text-lg;
       }

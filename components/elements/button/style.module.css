@@ -1,6 +1,7 @@
 .button {
   @apply flex
-  flex-col;
+  flex-col
+  dv-transition;
   /* Type */
   &.medium {
     @apply p-3
@@ -18,9 +19,9 @@
   /* Variant */
   &.bordered {
     @apply border;
-    border-color: #ffffff4d;
+    border-color: #d9d9d9;
     &:hover {
-      border-color: #ffffff80;
+      border-color: #9ba5ab;
     }
   }
   &.colored {
@@ -46,8 +47,14 @@
 /* Text */
 .text {
   @apply font-medium
-  text-white
   relative;
+}
+/* Color */
+.black .text {
+  @apply text-black;
+}
+.white .text {
+  @apply text-white;
 }
 /* Text type */
 .medium .text {
@@ -66,7 +73,8 @@
   rounded-full
   bg-white
   text-black
-  p-1;
+  p-1
+  dv-transition;
 }
 .button:hover .icon {
   @apply text-white 
