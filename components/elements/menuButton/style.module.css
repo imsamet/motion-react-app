@@ -19,3 +19,6 @@
     @apply top-0;
   }
 }
+.icon {
+  @apply relative;
+}

@@ -62,7 +62,12 @@ button.contactButton {
     }
   }
   .menuContent {
-    @apply fixed
+    @apply flex
+    gap-x-24 
+    px-20
+    py-3
+    pr-5
+    fixed
     -right-96
     w-fit
     h-screen
@@ -70,7 +75,6 @@ button.contactButton {
     overflow-scroll
     dv-transition;
     background-color: var(--dark-blue);
-    padding: 12px 80px 80px;
     .item {
       @apply pt-10
       pb-10
