@@ -6,7 +6,7 @@ const Button = ({ color, variant, size, children, className, ...props }) => {
   return (
     <button className={cn(styles.button, styles?.[size], styles?.[variant], styles?.[color], className)} {...props}>
       <span className={styles.text}>{children}</span>
-      <Icons className={styles.icon} name="Left" />
+      <Icons className={styles.icon} name="left" />
     </button>
   );
 };
