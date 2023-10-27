@@ -1,6 +1,12 @@
-.heading {
-  @apply font-medium;
+.header {
+  @apply pt-8;
 }
 h1.title {
-  @apply text-[80px] text-[var(--dark-blue)] tracking-[-4px] leading-[4.39rem] w-96 font-medium;
+  @apply text-[80px] 
+  text-[var(--dark-blue)]
+  tracking-[-4px]
+  leading-[4.39rem]
+  w-4/5
+  min-w-[24rem]
+  font-medium;
 }

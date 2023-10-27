@@ -1,0 +1,8 @@
+.form {
+  @apply flex
+  flex-col
+  gap-y-5;
+}
+.footer {
+  @apply flex gap-x-10;
+}
