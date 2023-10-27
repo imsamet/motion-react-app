@@ -19,15 +19,17 @@
   /* Variant */
   &.bordered {
     @apply border;
-    border-color: #d9d9d9;
+    border-color: var(--soft-grey);
     &:hover {
-      border-color: #9ba5ab;
+      border-color: var(--grey);
     }
   }
   &.colored {
     @apply relative
     overflow-hidden;
     background: var(--blue);
+  }
+  &.gradiend {
     &::before {
       @apply block
       w-full
@@ -49,21 +51,9 @@
   @apply font-medium
   relative;
 }
-/* Color */
-.black .text {
-  @apply text-black;
-}
-.white .text {
-  @apply text-white;
-}
 /* Text type */
-.medium .text {
-  @apply text-sm 
-  h-2.5;
-}
 .large .text {
-  @apply text-2xl
-  h-4;
+  @apply h-4;
 }
 /* Icon */
 .icon {
@@ -71,13 +61,13 @@
   w-5
   h-5
   rounded-full
-  bg-white
-  text-black
+  bg-[var(--white)]
+  text-[var(--black)]
   p-1
   dv-transition;
 }
 .button:hover .icon {
-  @apply text-white 
+  @apply text-[var(--white)] 
   transform -rotate-45;
 }
 /* Icon type */
@@ -96,5 +86,5 @@
   background-color: var(--blue);
 }
 .colored:hover .icon {
-  @apply bg-black;
+  @apply bg-[var(--black)];
 }
