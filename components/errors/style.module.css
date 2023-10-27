@@ -7,12 +7,12 @@
 .content {
   @apply flex flex-col justify-center items-center h-full;
   span {
-    @apply text-base [font-stretch:normal] not-italic leading-[1.38] text-center text-[#000];
+    @apply text-base [font-stretch:normal] not-italic leading-[1.38] text-center text-[var(--black)];
   }
   h1 {
-    @apply text-[45px] [font-stretch:normal] not-italic leading-[1.22] text-center text-[#000];
+    @apply text-[45px] [font-stretch:normal] not-italic leading-[1.22] text-center text-[var(--black)];
   }
   h2 {
-    @apply text-base [font-stretch:normal] not-italic leading-[1.38] text-center text-[#000];
+    @apply text-base [font-stretch:normal] not-italic leading-[1.38] text-center text-[var(--black)];
   }
 }

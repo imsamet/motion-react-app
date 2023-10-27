@@ -85,7 +85,12 @@ const Nav = () => {
                 </li>
               ))}
             </ul>
-            <Button size="large" variant="colored" className={cn(styles.contactButton, styles.hamburgerContactButton)}>
+            <Button
+              size="large"
+              variant="colored"
+              isGradiend
+              className={cn(styles.contactButton, styles.hamburgerContactButton)}
+            >
               Request a demo
             </Button>
           </div>

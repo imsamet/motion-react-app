@@ -5,10 +5,12 @@
   w-full
   pt-10
   pb-10
-  dv-transition;
+  dv-transition
+  z-10;
   &.otherPage {
     @apply sticky
-    top-0;
+    top-0
+    bg-[var(--white)];
   }
   &.scroll {
     @apply pt-5
@@ -82,7 +84,7 @@ button.contactButton {
       border-color: #ffffff4d;
     }
     .link {
-      @apply text-white
+      @apply text-[var(--white)]
       font-medium
       text-5xl
       opacity-100
