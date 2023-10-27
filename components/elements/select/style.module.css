@@ -1,0 +1,83 @@
+.container {
+  @apply relative;
+}
+/* Label */
+.label {
+  @apply absolute
+  top-[26px]
+  left-[30px]
+  font-medium
+  dv-transition
+  pointer-events-none;
+}
+/* Input */
+.input {
+  @apply px-8 
+  pt-5 
+  outline-none 
+  border
+  border-[var(--soft-grey)]
+  rounded-[20px] 
+  h-20 
+  w-full 
+  text-transparent
+  font-medium
+  text-lg
+  dv-transition;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    @apply text-[var(--dark-blue)];
+    -webkit-text-fill-color: var(--dark-blue) !important;
+    -webkit-background-clip: text;
+  }
+  &.open {
+    @apply text-[var(--dark-blue)];
+  }
+  &:disabled {
+    @apply opacity-50;
+  }
+  &.error {
+    @apply border-[var(--error)];
+  }
+}
+/* Focused */
+.isFocused {
+  .label {
+    @apply text-sm
+    text-[var(--grey)]
+    top-[14px];
+  }
+}
+/* Hover */
+.container:hover .input {
+  @apply border-[var(--blue)];
+}
+/* Disabled */
+.disabled {
+  @apply pointer-events-none
+  opacity-50
+  cursor-no-drop;
+
+  .input,
+  .label {
+    @apply cursor-no-drop;
+  }
+}
+/* Error */
+.errorLabel {
+  @apply absolute 
+  top-full
+  right-6 
+  text-[var(--error)] 
+  font-medium 
+  text-xs 
+  px-1 
+  bg-[var(--white)] 
+  transform 
+  -translate-y-[55%];
+}
