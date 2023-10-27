@@ -1,5 +1,5 @@
 .menu {
-  @apply text-white
+  @apply text-[var(--white)]
   rounded-lg
   relative
   truncate;
