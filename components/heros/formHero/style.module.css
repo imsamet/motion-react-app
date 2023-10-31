@@ -1,5 +1,5 @@
 .header {
-  @apply pt-8;
+  @apply pt-8 pb-60;
 }
 h1.title {
   @apply text-[80px] 

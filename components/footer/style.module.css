@@ -1,0 +1,28 @@
+.footer {
+  @apply fixed
+  bottom-0
+  left-0
+  w-full
+  dv-transition
+  z-[1]
+  bg-[var(--dark-blue)];
+}
+.content {
+  @apply py-[70px];
+}
+.topButton {
+  @apply flex bg-[var(--white)] p-1 w-6 h-6 rounded-full ml-auto cursor-pointer dv-transition;
+  svg {
+    @apply dv-transition;
+  }
+  &:hover {
+    @apply bg-[var(--blue)];
+    svg {
+      @apply text-[var(--white)];
+    }
+  }
+  transform: rotateZ(270deg);
+}
+.logo {
+  @apply pt-20 pb-[164px];
+}

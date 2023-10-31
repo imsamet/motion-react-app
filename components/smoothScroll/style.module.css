@@ -1,0 +1,6 @@
+.scrollContainer {
+  @apply fixed top-0 left-0 w-full overflow-hidden z-[2] pointer-events-none;
+}
+.wrapper {
+  @apply pointer-events-none;
+}

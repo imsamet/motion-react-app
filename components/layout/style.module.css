@@ -1,0 +1,6 @@
+.main {
+  @apply pointer-events-none;
+}
+.content {
+  @apply bg-[var(--white)] min-h-[90vh] pointer-events-auto;
+}
