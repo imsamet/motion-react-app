@@ -6,7 +6,8 @@
   pt-10
   pb-10
   dv-transition
-  z-10;
+  z-10
+  [pointer-events:initial];
   &.otherPage {
     @apply sticky
     top-0
